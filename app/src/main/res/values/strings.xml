@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ASProject</string>
+    <string-array name="categories_names">
+        <item>Category1</item>
+        <item>Category2</item>
+        <item>Category3</item>
+        <item>Category4</item>
+        <item>Category5</item>
+        <item>Category6</item>
+        <item>Category7</item>
+        <item>Category8</item>
+    </string-array>
 </resources>
