@@ -2,31 +2,28 @@ package com.example.asproject
 
 import android.content.Intent
 import android.graphics.Color
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.ListView
+import android.widget.Button
 import android.widget.RadioButton
 import android.widget.Toast
-import androidx.annotation.RequiresApi
-import kotlinx.android.synthetic.main.activity_main2.*
+import kotlinx.android.synthetic.main.activity_categories.*
 import kotlinx.android.synthetic.main.activity_main3.*
 
-class MainActivity2 : AppCompatActivity() {
+class Categories : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_categories)
     }
 
     fun toActivity1(view: View?) {
-        val intent = Intent(this@MainActivity2, MainActivity::class.java)
+        val intent = Intent(this@Categories, MainActivity::class.java)
         startActivity(intent)
     }
 
     fun toActivity3(view: View?) {
-        val intent = Intent(this@MainActivity2, MainActivity3::class.java)
+        val intent = Intent(this@Categories, MainActivity3::class.java)
         startActivity(intent)
     }
 
@@ -38,6 +35,13 @@ class MainActivity2 : AppCompatActivity() {
     fun theme(view: View?)
     {
         gl.setBackgroundColor(Color.parseColor("#636363"))
+    }
+
+    fun presscategory(view: View?)
+    {
+        val myButton = findViewById<View>(view!!.id) as Button
+
+        Toast.makeText(applicationContext, myButton.text, Toast.LENGTH_SHORT).show()
     }
 
 }

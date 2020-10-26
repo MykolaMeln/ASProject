@@ -16,7 +16,7 @@ class MainActivity3 : AppCompatActivity() {
     }
 
     fun toActivity2(view: View?) {
-        val intent = Intent(this@MainActivity3, MainActivity2::class.java)
+        val intent = Intent(this@MainActivity3, Categories::class.java)
         startActivity(intent)
     }
 

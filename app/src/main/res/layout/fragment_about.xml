@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="#456464"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="@android:color/black"
+        android:text="About"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="693dp"
+        android:background="#456464"
+        android:fontFamily="serif"
+        android:inputType="textMultiLine"
+        android:text="\nТема: Товари на складі\nРозробник: Мельничук Микола\nВерсія: v.0.2.0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textSize="22sp" />
+</LinearLayout>

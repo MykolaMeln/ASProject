@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="#456464"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="@android:color/black"
+        android:text="Terms of Use"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="673dp"
+        android:background="#456464"
+        android:fontFamily="serif"
+        android:inputType="textMultiLine"
+        android:shadowColor="@android:color/black"
+        android:text="\n     1. By using The Warehouse, you acknowledge the terms and conditions hereof and agree that you will be bound by the terms and conditions contained in this Agreement.\n
+    2. You agree to use the Service only for purposes that are permitted by (a) the Agreement and (b) any applicable law, regulation or guideline in the relevant jurisdictions.\n
+    3. You agree not to access (or attempt to access) any of the Service by any means other than through the interface that is provided by Warehouse.\n
+    4. You agree that you are solely responsible for any breach of your obligations under the Agreement and for the consequences of any such breach.\n"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="22sp" />
+</LinearLayout>
