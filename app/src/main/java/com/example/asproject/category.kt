@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_categories.*
+import kotlinx.android.synthetic.main.fragment_category.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,7 +20,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [category.newInstance] factory method to
  * create an instance of this fragment.
  */
-class category : Fragment() {
+class category : Fragment(){
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,13 +34,27 @@ class category : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val rootView = inflater.inflate(R.layout.fragment_category,container,false)
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_category, container, false)
+        return rootView
     }
 
+    fun theme(view: View?)
+    {
+        gl.setBackgroundColor(Color.parseColor("#636363"))
+    }
+
+    fun presscategory(view: View?)
+    {
+      //  val myButton = findViewById<View>(view!!.id) as Button
+
+      //  Toast.makeText(activity, myButton.text, Toast.LENGTH_SHORT).show()
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

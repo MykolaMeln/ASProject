@@ -1,10 +1,15 @@
 package com.example.asproject
 
+import android.R
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_elements.*
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,10 +38,18 @@ class elements : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_elements, container, false)
+        val rootView = inflater.inflate(com.example.asproject.R.layout.fragment_elements,container,false)
+
+        return rootView
     }
 
+    fun showChecked(view: View?)
+    {
+        val checkedRadioButtonId: Int = radioGroup.getCheckedRadioButtonId()
+        val myRadioButton = activity?.findViewById<View>(checkedRadioButtonId) as RadioButton
+
+        Toast.makeText(activity, myRadioButton.text, Toast.LENGTH_SHORT).show()
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of
