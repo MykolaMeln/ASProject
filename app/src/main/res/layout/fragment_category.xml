@@ -10,7 +10,7 @@
     android:columnCount="3"
     android:rowCount="7"
     android:visibility="visible"
-    tools:context=".category">
+    tools:context=".screens.category.category">
 
 
     <Button

@@ -1,9 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
+<layout>
+    <data>
+        <variable
+            name="fragmod"
+            type="com.example.asproject.screens.elements.ElementsViewModel" />
+    </data>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    tools:context=".MainActivity3"
     android:orientation="vertical"
     android:layout_height="match_parent">
 
@@ -11,8 +16,7 @@
         android:id="@+id/buttonb2"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:onClick="toActivity2"
-        android:text="Back" />
+        android:text="@{fragmod.text}" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -23,7 +27,8 @@
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
             android:layout_height="86dp"
-            android:text="Element1" />
+            android:text="Element1"
+            android:onClick="@{()->fragmod.ActiveEvent()}"/>
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -54,7 +59,6 @@
         android:id="@+id/buttonsh"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:onClick="showChecked"
         android:text="Show" />
 
     <TextView
@@ -64,3 +68,4 @@
         android:text="ASProject" />
 
 </LinearLayout>
+</layout>

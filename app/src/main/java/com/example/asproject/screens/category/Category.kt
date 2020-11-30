@@ -1,15 +1,13 @@
-package com.example.asproject
+package com.example.asproject.screens.category
 
-import android.R
+import android.graphics.Color
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioButton
-import android.widget.Toast
-import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_elements.*
-
+import com.example.asproject.R
+import kotlinx.android.synthetic.main.fragment_category.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,10 +16,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [elements.newInstance] factory method to
+ * Use the [category.newInstance] factory method to
  * create an instance of this fragment.
  */
-class elements : Fragment() {
+class category : Fragment(){
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,20 +33,26 @@ class elements : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(com.example.asproject.R.layout.fragment_elements,container,false)
+        val rootView = inflater.inflate(R.layout.fragment_category,container,false)
 
+        // Inflate the layout for this fragment
         return rootView
     }
 
-    fun showChecked(view: View?)
+    fun theme(view: View?)
     {
-        val checkedRadioButtonId: Int = radioGroup.getCheckedRadioButtonId()
-        val myRadioButton = activity?.findViewById<View>(checkedRadioButtonId) as RadioButton
+        gl.setBackgroundColor(Color.parseColor("#636363"))
+    }
 
-        Toast.makeText(activity, myRadioButton.text, Toast.LENGTH_SHORT).show()
+    fun presscategory(view: View?)
+    {
+      //  val myButton = findViewById<View>(view!!.id) as Button
+
+      //  Toast.makeText(activity, myButton.text, Toast.LENGTH_SHORT).show()
     }
     companion object {
         /**
@@ -57,12 +61,12 @@ class elements : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment elements.
+         * @return A new instance of fragment category.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            elements().apply {
+            category().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
