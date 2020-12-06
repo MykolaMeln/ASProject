@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="goods"
+            type="com.example.asproject.screens.addgoods.AddGoodsViewModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".screens.addgoods.AddGoodsFragment">
+
+    <EditText
+        android:id="@+id/namegoods"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:ems="10"
+        android:hint="Name"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/codegoods"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:ems="10"
+        android:hint="Code"
+        android:text="" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/countgoods"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:hint="0"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Count" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/buttonaddgood"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_marginTop="5dp"
+        android:text="Add Good"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_marginTop="5dp"
+        android:text="Delete All Goods"
+        android:onClick="@{()->goods.onClear()}"
+        android:enabled="@{goods.visibility}"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="355dp"
+        android:text="@{goods.list_goods_string}" />
+
+</LinearLayout>
+</layout>

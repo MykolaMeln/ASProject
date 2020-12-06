@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="86dp"
             android:text="Element1"
-            android:onClick="@{()->fragmod.ActiveEvent()}"/>
+            android:onClick="@{()->fragmod.activeEvent()}"/>
 
         <RadioButton
             android:id="@+id/radioButton2"

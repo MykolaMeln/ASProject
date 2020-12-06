@@ -42,7 +42,6 @@ class ElementsFragment : Fragment() {
             false
         )
 
-
         Timber.i("Called ViewModelProviders.of!")
         viewModelFactory = ElementsViewModelFactory("Factory Text")
 
@@ -54,7 +53,7 @@ class ElementsFragment : Fragment() {
             if (viewModel.event.value!!)//true
             {
                 Timber.i("Event is true!")
-                viewModel.NoActiveEvent()
+                viewModel.noActiveEvent()
             }
         }
 
@@ -64,8 +63,8 @@ class ElementsFragment : Fragment() {
 
         viewModel.event.observe(viewLifecycleOwner, Observer{
             it->if(it) {
-            Timber.i("It")
-            viewModel.NoActiveEvent()
+            Timber.i("It Event False!")
+            viewModel.noActiveEvent()
         }
         })
 

@@ -27,14 +27,13 @@ class ElementsViewModel(text:String) : ViewModel(){
         Timber.i("elementsviewmodel Destroyed!")
     }
 
-    fun ActiveEvent(){
+    fun activeEvent(){
         _event.value = true
         _text.value = "Event true text"
     }
 
-    fun NoActiveEvent(){
+    fun noActiveEvent(){
         _event.value = false
-
     }
 
 }

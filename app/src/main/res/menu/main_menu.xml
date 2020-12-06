@@ -5,16 +5,20 @@
         android:orderInCategory="1"
         android:title="Categories"/>
     <item
-        android:id="@+id/action_elements"
+        android:id="@+id/action_add"
         android:orderInCategory="2"
+        android:title="Add Goods" />
+    <item
+        android:id="@+id/action_elements"
+        android:orderInCategory="3"
         android:title="Elements"
         />
     <item
         android:id="@+id/action_terms_of_use"
-        android:orderInCategory="3"
+        android:orderInCategory="4"
         android:title="Terms of Use"/>
     <item
         android:id="@+id/action_about"
-        android:orderInCategory="4"
+        android:orderInCategory="5"
         android:title="About" />
 </menu>
