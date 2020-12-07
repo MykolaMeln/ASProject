@@ -42,7 +42,7 @@ class GoodsDB_Test {
     fun method() {
         val goods = Goods()
         G_Dao.insert(goods)
-        val good = G_Dao.gat_last_goods()
+        val good = G_Dao.get_last_goods()
         assertEquals(good?.count, 0)
     }
 }

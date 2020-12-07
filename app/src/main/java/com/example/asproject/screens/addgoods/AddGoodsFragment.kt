@@ -20,6 +20,11 @@ class AddGoodsFragment : Fragment() {
     private lateinit var viewModel: AddGoodsViewModel
     private lateinit var binding: AddGoodsFragmentBinding
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProviders.of(this).get(AddGoodsViewModel::class.java)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -63,11 +68,4 @@ class AddGoodsFragment : Fragment() {
 
         return binding.root
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(AddGoodsViewModel::class.java)
-    }
-
-
 }

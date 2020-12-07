@@ -72,15 +72,15 @@ class AddGoodsViewModel(val database: GoodDao, application: Application) : Andro
         }
     }
 
-    private var goods = MutableLiveData<Goods?>()
+    private val goods = MutableLiveData<Goods?>()
 
     val visibility = Transformations.map(goods) {
         null != it
     }
 
     private fun initializeRecord(){
-        uiScope.launch {
-            goods.value = getRecordFromDB()
+        viewModelScope.launch {
+        getRecordFromDB()
         }
     }
 
