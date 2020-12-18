@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Toast
 import com.example.asproject.screens.about.about
 import com.example.asproject.screens.addgoods.AddGoodsFragment
+import com.example.asproject.screens.api.ApiFragment
 import com.example.asproject.screens.category.category
 import com.example.asproject.screens.elements.ElementsFragment
 import com.example.asproject.screens.termsofuse.terms_of_use
@@ -108,8 +109,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_elements -> {
-                val newFragment =
-                    ElementsFragment()
+                val newFragment = ElementsFragment()
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.replace(R.id.linearLayout, newFragment)
                 transaction.addToBackStack(null)
@@ -117,8 +117,15 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_add -> {
-                val newFragment =
-                   AddGoodsFragment()
+                val newFragment = AddGoodsFragment()
+                val transaction = supportFragmentManager.beginTransaction()
+                transaction.replace(R.id.linearLayout, newFragment)
+                transaction.addToBackStack(null)
+                transaction.commit()
+                true
+            }
+            R.id.action_api -> {
+                val newFragment = ApiFragment()
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.replace(R.id.linearLayout, newFragment)
                 transaction.addToBackStack(null)
